@@ -29,10 +29,10 @@ app.use(express.json()); // Make sure it comes back as JSON
 
 
 const corsOptions = {
-    origin: 'https://frontend-mu-mocha.vercel.app/',
+    origin: 'https://frontend-mu-mocha.vercel.app',
     optionsSuccessStatus: 200
 }
-app.use (cors(corsOptions));
+app.use(cors(corsOptions));
 
 
 // Create an Apollo Server instance

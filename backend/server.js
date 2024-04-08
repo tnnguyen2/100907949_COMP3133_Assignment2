@@ -23,12 +23,17 @@ mongoose.connect(DB_CONNECTION, {
     console.log('Error Mongodb connection', err)
 });
 
-
-
 // Create an Express app
 const app = express();
 app.use(express.json()); // Make sure it comes back as JSON
+
+
+const corsOptions = {
+    origin: 'https://frontend-mu-mocha.vercel.app/',
+    optionsSuccessStatus: 200
+}
 app.use (cors());
+
 
 // Create an Apollo Server instance
 const server = new ApolloServer({

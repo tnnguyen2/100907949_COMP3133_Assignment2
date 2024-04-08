@@ -30,7 +30,7 @@ const app = express();
 app.use(express.json()); // Make sure it comes back as JSON
 
 corsOptions = {
-    origin: 'frontend-ezrde62v0-tonys-projects-6bba6d22.vercel.app',
+    origin: 'https://frontend-mu-mocha.vercel.app',
     credentials: true
 }
 

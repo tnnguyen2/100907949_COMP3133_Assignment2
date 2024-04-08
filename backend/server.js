@@ -5,6 +5,8 @@ const typeDefs = require('./graphQLschemas/schemas');
 const resolvers = require('./graphQLresolvers/resolvers');
 const cors = require('cors');
 
+require('dotenv').config();
+
 // Connect to MongoDB
 const DB_HOST = "@cluster0.hgh3k7b.mongodb.net";
 const DB_USER = "tdotnguyen";
@@ -50,7 +52,7 @@ async function startServer() {
 }
 
 // Start the server
-const SERVER_PORT = 3000;
+const SERVER_PORT = 4000;
 startServer().then(() => {
     app.listen(SERVER_PORT, () => {
         console.log(`Server running at http://localhost:${SERVER_PORT}/`);

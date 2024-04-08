@@ -29,12 +29,8 @@ mongoose.connect(DB_CONNECTION, {
 const app = express();
 app.use(express.json()); // Make sure it comes back as JSON
 
-
-const corsOptions = {
-    origin: 'https://frontend-mu-mocha.vercel.app',
-    optionsSuccessStatus: 200
-}
-app.use(cors(corsOptions));
+// Enable CORS
+app.use(cors());
 
 
 // Create an Apollo Server instance
@@ -52,7 +48,7 @@ async function startServer() {
 }
 
 // Start the server
-const SERVER_PORT = 4000;
+const SERVER_PORT = 3000;
 startServer().then(() => {
     app.listen(SERVER_PORT, () => {
         console.log(`Server running at http://localhost:${SERVER_PORT}/`);

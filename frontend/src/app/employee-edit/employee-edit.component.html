@@ -1,12 +1,9 @@
-<div class="form-container">
-  <h1 class="form-title">Employee Form</h1>
+<div class="edit-container">
+  <h1 class="form-title">Update Employee</h1>
   <form [formGroup]="employeeForm" (ngSubmit)="onSubmit()">
     <div>
       <label for="firstName">First Name:</label>
       <input type="text" id="firstName" formControlName="firstName">
-      <div *ngIf="employeeForm.get('firstName')?.invalid && employeeForm.get('firstName')?.touched" class="error-message">
-        First Name is required
-      </div>
     </div>
 
     <div>
@@ -22,7 +19,7 @@
     <div>
       <label for="gender">Gender:</label>
       <select id="gender" formControlName="gender">
-        <option value="" disabled selected>Select Gender</option>
+        <option value="" disabled>Select Gender</option>
         <option value="male">Male</option>
         <option value="female">Female</option>
         <option value="other">Other</option>
@@ -34,7 +31,7 @@
       <input type="number" id="salary" formControlName="salary">
     </div>
 
-    <button type="submit" [disabled]="!employeeForm.valid">Submit</button>
+    <button type="submit" [disabled]="!employeeForm.valid">Update</button>
     <button type="button" (click)="onCancel()">Cancel</button>
   </form>
 </div>

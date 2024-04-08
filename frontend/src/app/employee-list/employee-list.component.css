@@ -1,0 +1,98 @@
+div {
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 15px;
+}
+
+h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0px;
+}
+
+.employee-item {
+  margin-bottom: 5px;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.employee-info {
+  flex-grow: 1;
+}
+
+
+.buttons-container {
+  display: flex;
+}
+
+.button1{
+  padding: 8px 16px;
+  margin-left: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+}
+.button2{
+  padding: 8px 16px;
+  margin-left: 10px;
+  background-color: #01a85b;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+}
+.button3{
+  padding: 8px 16px;
+  margin-left: 10px;
+  background-color: #f13d3d;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+
+.button1:hover {
+  background-color: #0056b3;
+}
+.button2:hover {
+  background-color: #176742;
+}
+.button3:hover {
+  background-color: #bb4c4c;
+}
+
+.employeeFirstName, .employeeLastName {
+  font-size: 24px;
+  font-weight: bold;
+}
+.employeeEmail {
+  font-size: 18px;
+  font-style: italic;
+}
+.signOut, .addEmployee {
+  padding: 8px 16px;
+  margin-left: 10px;
+  background-color: #040b1c;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+}

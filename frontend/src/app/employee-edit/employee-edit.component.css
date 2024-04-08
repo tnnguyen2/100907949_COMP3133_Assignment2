@@ -1,4 +1,4 @@
-.form-container {
+.edit-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -6,50 +6,53 @@
   height: 100vh;
 }
 
-.form-container form {
+.edit-container form {
   width: 300px;
   border: 2px solid #040b1c;
   border-radius: 4px;
   padding: 20px;
 }
 
-.form-container .form-title {
+.edit-container .form-title {
   font-size: 24px;
   margin-bottom: 20px;
   text-align: center;
 }
 
-.form-container form div {
+.edit-container form div {
   margin-bottom: 10px;
 }
 
-.form-container form label {
+.edit-container form label {
   display: block;
   margin-bottom: 5px;
 }
 
-.form-container form select,
-.form-container form button {
+.edit-container form select,
+.edit-container form button {
   width: 100%;
   padding: 8px;
   border-radius: 4px;
   border: 1px solid #ccc;
 }
-.form-container form input{
+.edit-container form input{
   width: calc(100% - 20px);
   padding: 8px;
   border-radius: 4px;
   border: 1px solid #ccc;
 }
 
-.form-container form button {
+.edit-container form button {
   margin-top: 10px;
   background-color: #007bff;
   color: #fff;
   cursor: pointer;
 }
-
-.form-container form button:disabled {
+.edit-container form button:disabled {
   background-color: #ccc;
   cursor: not-allowed;
 }
+
+
+
+

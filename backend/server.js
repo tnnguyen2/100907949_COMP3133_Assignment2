@@ -3,6 +3,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const typeDefs = require('./graphQLschemas/schemas');
 const resolvers = require('./graphQLresolvers/resolvers');
+const cors = require('cors');
 
 // Connect to MongoDB
 const DB_HOST = "@cluster0.hgh3k7b.mongodb.net";
@@ -22,14 +23,19 @@ mongoose.connect(DB_CONNECTION, {
     console.log('Error Mongodb connection', err)
 });
 
+
+
 // Create an Express app
 const app = express();
 app.use(express.json()); // Make sure it comes back as JSON
+app.use (cors());
 
 // Create an Apollo Server instance
 const server = new ApolloServer({
     typeDefs,
-    resolvers
+    resolvers,
+    cache: "bounded",
+    persistedQueries: false
 });
 
 // Start the Apollo Server and then apply middleware to integrate with Express

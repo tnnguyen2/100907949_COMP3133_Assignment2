@@ -58,7 +58,7 @@ const resolvers = {
         },
         deleteEmployee: async (_, { id }) => {
             await Employee.findByIdAndDelete(id);
-            return 'Employee deleted successfully';
+            return 'Interface deleted successfully';
         },
     },
 };

@@ -1,1 +1,16 @@
-<p>employee-details works!</p>
+<div class="detailContainer">
+  <h1>Employee Details</h1>
+  <button [routerLink]="['/employees']" class="goBack">Go Back</button>
+  <div *ngIf="employee">
+    <div class="employee-info">
+      <p class="employeeFirstName"><strong>First Name:</strong> {{ employee.firstName }}</p>
+      <p class="employeeLastName"><strong>Last Name:</strong> {{ employee.lastName }}</p>
+      <p class="employeeEmail"><strong>Email:</strong> {{ employee.email }}</p>
+      <p class="employeeGender"><strong>Gender:</strong> {{ employee.gender }} </p>
+      <p class="employeeSalary"><strong>Salary:</strong> ${{ employee.salary }}</p>
+    </div>
+  </div>
+  <div *ngIf="detailMessage" class="error-message">
+    {{ detailMessage }}
+  </div>
+</div>

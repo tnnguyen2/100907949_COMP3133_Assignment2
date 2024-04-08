@@ -1,1 +1,24 @@
-<p>employee-list works!</p>
+<div>
+  <h1>Employee List</h1>
+
+  <button class="addEmployee" (click)="addEmployee()">Add Employee</button>
+  <button class="signOut" (click)="signOut()">Sign Out</button>
+  <ul>
+    <li *ngFor="let employee of employees" class="employee-item">
+      <div class="employee-info">
+        <p class="employeeFirstName"><strong>First Name:</strong> {{ employee.firstName }}</p>
+        <p class="employeeLastName"><strong>Last Name:</strong> {{ employee.lastName }}</p>
+        <p class="employeeEmail"><strong>Email: </strong>{{ employee.email }}</p>
+      </div>
+      <div class="button-container">
+        <button class="button1" [routerLink]="['/employees',employee.id]" >View</button>
+        <button class="button2" [routerLink]="['/updateEmployee',employee.id]">Edit</button>
+        <button class="button3" (click)="confirmDeleteEmployee(employee.id)">Delete</button>
+      </div>
+    </li>
+  </ul>
+
+  <div class="alert" *ngIf="showAlert">{{ alertMessage }}</div>
+</div>
+
+

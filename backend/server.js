@@ -29,8 +29,13 @@ mongoose.connect(DB_CONNECTION, {
 const app = express();
 app.use(express.json()); // Make sure it comes back as JSON
 
+corsOptions = {
+    origin: 'frontend-ezrde62v0-tonys-projects-6bba6d22.vercel.app',
+    credentials: true
+}
+
 // Enable CORS
-app.use(cors());
+app.use(cors(corsOptions));
 
 
 // Create an Apollo Server instance

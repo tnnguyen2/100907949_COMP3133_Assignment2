@@ -1,6 +1,6 @@
 import {Injectable} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
-import {catchError, map, Observable, throwError} from 'rxjs';
+import {map, Observable} from 'rxjs';
 import {Employee} from "../interface/employee";
 import {User} from "../interface/user";
 
@@ -8,7 +8,7 @@ import {User} from "../interface/user";
   providedIn: 'root'
 })
 export class NetworkService {
-  private baseUrl = 'http://localhost:3000/graphQL'; // URL of the GraphQL server
+  private baseUrl = 'https://comp3133-assignment2-backend.onrender.com/graphQL'; // URL of the GraphQL server
 
   constructor(private http: HttpClient) {
   }
